@@ -9,10 +9,18 @@
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
+    background-color: hsl(30, 38%, 92%);
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
 
 .product {
     width: 370px;
+    background-color: white;
 }
 
 .product__image {
@@ -53,4 +61,36 @@ body {
 .product__info {
     padding: 1rem;
     /* siempre usar rem o píxeles */
+}
+.product__button{
+    background-color: hsl(158, 36%, 37%);
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0.8rem 0.5rem;
+    border: none;
+    margin: 5px 0;
+    font-size: 0.9rem;
+    width: 100%;
+}
+@media(min-width: 420px){
+
+    .product {
+        display: flex;
+        justify-content: center;
+        width: 650px;
+        height: 500px;
+        border-radius: 16px 16px 16px 16px;
+    }
+    .product__image{
+        height: auto;
+        width: 100%;
+        border-radius: 16px 0 0 16px;
+        background-position: 30%;
+        background-image: url(./images/image-product-desktop.jpg);
+    }
+    .product__info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
